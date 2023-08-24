@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Merienda:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /*Horizontal Scrollbar Because of animation overflow*/
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+.input-container{
+    position: relative;
+    width: 50vw;
+    margin: 0 0 1em;
+}
+.input-container input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #c2c2c2;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-container span{
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    padding: 10px;
+    color: #e1dbdb;
+    pointer-events: none;
+    transition: 0.2s;
+}
+.input-container input:valid ~ span,
+.input-container input:focus ~ span{
+    color: #5d7c00;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0 6px;
+    background: #fff;
+
+}
+
+.input-container input:valid,
+.input-container input:focus{
+    color: #000000;
+    border: 2px solid #8dab26;
+
+}
+
